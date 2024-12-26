@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wedding Planner</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body style="background-image: url(images/background.jpg); background-size: cover;">
+    
+    <header>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <nav>
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="#" onclick="goToLogin(event)">Login</a></li>
+            </ul>
+        </nav>
+
+       <!-- Humming Bar -->
+<div class="humming-bar">
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+        <p>Contact us today for the best wedding planning services!</p>
+    </marquee>
+</div>
+
+    </header>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>Have questions or need assistance? Contact our team!</p>
+        <p>Email: info@weddingplanner.com</p>
+        <p>Phone: 8088304390</p>
+        
+        <div class="social-icons">
+            <a href="https://wa.me/1234567890" target="_blank" class="social-icon">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/yourusername" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/yourusername" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/yourusername" target="_blank" class="social-icon">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Login/Registration Modal -->
+    <div id="authModal" class="login-modal" style="display: none;">
+        <div class="login-modal-content">
+            <span class="close-btn" onclick="closeAuth()">&times;</span>
+            <h2 id="modalTitle">Login</h2>
+            
+            <!-- Login Form -->
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <input type="text" id="username" placeholder="Username" required><br>
+                <input type="password" id="password" placeholder="Password" required><br>
+                <button type="submit">Login</button>
+            </form>
+            
+            <p>Don't have an account? <a href="#" onclick="showRegister()">Register here</a></p>
+            
+            <!-- Registration Form -->
+            <form id="registerForm" style="display: none;" onsubmit="handleRegister(event)">
+                <input type="text" id="regUsername" placeholder="Username" required><br>
+                <input type="password" id="regPassword" placeholder="Password" required><br>
+                <button type="submit">Register</button>
+            </form>
+            
+            <p style="display: none;" id="registerMessage"></p>
+        </div>
+    </div>
+
+    <script src="script1.js"></script>
+    <!-- The script tag below is incorrectly written; fixed it by removing src= -->
+    <script src="script.js"></script>
+
+</body>
+</html>

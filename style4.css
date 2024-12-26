@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    align-items: stretch; /* Ensures all items have the same height */
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(99, 97, 97, 0.214);
+    padding: 20px 20px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-links.show {
+    display: block;
+}
+
+.service {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-between; /* Evenly distribute space */
+    background: rgba(198, 191, 191, 0.388);
+    padding-bottom: 50px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+.service img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(41, 42, 43);
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #3c3d40;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        margin: 10% auto;
+        padding: 15px;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    form {
+        margin: 0 10px;
+        width: auto;
+    }
+}
+
+
+.whatsapp-icon {
+    margin: 20px; /* Add margin around the div */
+    padding: 10px; /* Add padding inside the div */
+}
+
+.whatsapp-icon i {
+    font-size: 40px; /* Set the size of the icon */
+    color: green; /* Set the color of the icon */
+    cursor: pointer; /* Change cursor to pointer when hovering */
+}
+
+/* Login Modal Styles */
+.login-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1001; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.login-modal-content {
+    background-color: #9e999998;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding-left:20px;
+    padding-right: 10px;
+    padding-top: 100px;
+    border: 1px solid #888;
+    width: 400px; 
+    height: 400px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #0d728880;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+button:hover:active {
+    background-color: green;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column; /* Stack links vertically */
+        background-color: rgba(92, 91, 87, 0.286);
+        position: absolute;
+        top: 20px; /* Position below navbar */
+        right: 0;
+        width: 250px;
+        bottom: 410px;
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .container {
+        padding-top: 60px; /* Adjust padding for mobile */
+    }
+}
+.login-modal-content {
+    max-width: 400px; /* Set max width for the modal content */
+    margin: 15% auto; /* Center it */
+    padding: 20px;
+    border: 1px solid #888;
+    background: #08b667b2; /* White background */
+    border-radius: 5px; /* Rounded corners */
+}
+#registerForm {
+    display: none; /* Initially hide the registration form */
+}

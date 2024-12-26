@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image:url('images/background.jpg');
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    background-size:cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(99, 97, 97, 0.214);
+    padding: 20px 20px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-links.show {
+    display: block;
+}
+
+.container {
+
+    text-align: center;
+    padding: 100px 20px; /* Add space for fixed navbar */
+    background-color: rgba(122, 117, 117, 0.118);
+    border: 2px solid #3333331a; /* Add border around the entire container */
+    border-radius:30px; /* Optional: round the container's corners */
+    max-width: 800px; /* Set a maximum width to prevent it from stretching too wide */
+    margin: 0 auto; /* Center the container */
+}
+
+.container h1 {
+    
+    border: 2px; /* Add border */
+    padding: 20px;
+    margin: 20px auto;
+    display: inline-block;
+    border-radius:5px;
+}
+
+.container p {
+    font-size: 20px;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color:blueviolet; /* WhatsApp color */
+    border-radius:none;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.whatsapp-icon a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.login-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1001; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.login-modal-content {
+    background-color: #9e999998;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding-left:20px;
+    padding-right: 10px;
+    padding-top: 100px;
+    border: 1px solid #888;
+    width: 400px; 
+    height: 400px;/* Could be more or less, depending on screen size */
+    
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #052b41;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #555;
+}
+button:hover:active{
+    background-color: green;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display:none;
+        flex-direction: column; /* Stack links vertically */
+        background-color: rgba(92, 91, 87, 0.286);
+        position: absolute;
+        top:20px; /* Position below navbar */
+        right:0;
+        width: 250px;
+        bottom: 410px;
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display:block;
+    
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .container {
+        padding-top: 60px; /* Adjust padding for mobile */
+    }
+}
+/* Add this CSS to your existing styles */
+.login-modal-content {
+    max-width: 400px; /* Set max width for the modal content */
+    margin: 15% auto; /* Center it */
+    padding: 20px;
+    border: 1px solid #888;
+    background: #08b667b2; /* White background */
+    border-radius: 5px; /* Rounded corners */
+}
+
+#registerForm {
+    display: none; /* Initially hide the registration form */
+}

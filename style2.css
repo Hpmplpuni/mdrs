@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(99, 97, 97, 0.214);
+    padding: 20px 20px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.hamburger {
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.nav-links.show {
+    display: block;
+}
+
+.container {
+    text-align: center;
+    padding: 100px 20px; /* Add space for fixed navbar */
+    background-color: rgba(122, 117, 117, 0.118);
+    border: 2px solid #3333331a; /* Add border around the entire container */
+    border-radius:15px; /* Optional: round the container's corners */
+    max-width: 800px; /* Set a maximum width to prevent it from stretching too wide */
+    margin: 0 auto; /* Center the container */
+}
+
+.container h1 {
+    padding: 20px;
+    margin: 20px auto;
+    display: inline-block;
+    border: 2px solid #75b6bd; /* Added border for h1 */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.195); /* Light background for better contrast */
+}
+
+.container p {
+    font-size: 20px;
+    line-height: 1.6; /* Set a fixed line height for consistent spacing between lines */
+    max-width: 800px; /* Limit paragraph width for better readability */
+    margin: 20px auto; /* Center the paragraph */
+    padding: 0 20px; /* Add horizontal padding */
+    text-align: center; /* Ensures both left and right edges are aligned */
+}
+
+/* Social icons styling */
+.social-icons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    margin: 0 10px;
+    font-size: 50px; /* Adjusted to medium size */
+    color: #1baf22;
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove border if any */
+}
+
+.social-icon i {
+    font-size: inherit; /* Ensures icons match the container's font size */
+}
+
+.social-icon:hover {
+    color: #113be2; /* Change color on hover */
+    text-decoration: none; /* Ensure no text decoration on hover */
+}
+
+/* Humming bar styles */
+.humming-bar {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+    color: #fff; /* White text */
+    text-align: center; /* Center text */
+    padding: 10px 0; /* Vertical padding */
+    font-size: 16px; /* Text size */
+    position: relative; /* Fixed if needed */
+    top: 0;
+    width: 100%; /* Full width */
+    z-index: 100; /* Ensure it is on top */
+}
+
+.humming-bar p {
+    margin: 0; /* Remove default margin */
+    font-weight: bold;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hidden by default on larger screens */
+    cursor: pointer; /* Change cursor to pointer */
+    margin: 10px; /* Add some margin */
+}
+
+.hamburger .line {
+    width: 30px; /* Width of the lines */
+    height: 3px; /* Height of the lines */
+    background-color: #333; /* Color of the lines */
+    margin: 5px 0; /* Space between lines */
+    transition: 0.4s; /* Animation for smooth effect */
+}
+
+/* Show hamburger menu on small screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on smaller screens */
+    }
+        .nav-links {
+            display: none;
+            flex-direction: column; /* Stack links vertically */
+            background-color: rgba(92, 91, 87, 0.286);
+            position: absolute;
+            top: 20px; /* Position below navbar */
+            right: 0;
+            width: 250px;
+            bottom: 410px;
+            justify-content: space-between;
+        }
+
+    .nav-links.show {
+        display: flex; /* Show links when toggled */
+    }
+}
+
+/* Modal Background */
+.login-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.login-modal-content {
+    background-color: #9e999998; /* Slightly transparent background */
+    margin: 15% auto; /* Centered vertically and horizontally */
+    padding: 20px; /* Padding inside the modal */
+    border: 1px solid #888; /* Border around modal */
+    width: 400px; /* Width of the modal */
+    height: auto; /* Adjust height based on content */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Close Button */
+.close-btn {
+    color: #aaa; /* Color of the close button */
+    float: right; /* Position to the right */
+    font-size: 28px; /* Size of the close button */
+    font-weight: bold; /* Bold text */
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black; /* Change color on hover/focus */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside input */
+    margin: 10px 0; /* Margin between inputs */
+    border: 1px solid #ccc; /* Border around input */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Button */
+button {
+    background-color: #052b41; /* Background color */
+    color: white; /* Text color */
+    padding: 10px; /* Padding inside button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor to pointer */
+    width: 100%; /* Full width */
+}
+
+/* Button Hover Effects */
+button:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+button:hover:active {
+    background-color: green; /* Change color on active */
+}
+.login-modal-content {
+    max-width: 400px; /* Set max width for the modal content */
+    margin: 15% auto; /* Center it */
+    padding: 20px;
+    border: 1px solid #888;
+    background: #08b667b2; /* White background */
+    border-radius: 5px; /* Rounded corners */
+}
+#registerForm {
+    display: none; /* Initially hide the registration form */
+}
+

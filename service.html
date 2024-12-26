@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Event Management</title>
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body style="background-image: url(images/background.jpg); background-size: cover;">
+
+    <header>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul id="nav-links" class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="javascript:void(0);" onclick="goToLogin(event)">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="whatsapp-icon">
+        <a href="https://wa.me/918088304390" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <div class="container">
+        <h1>Our Services</h1>
+
+        <div class="service">
+            <img src="images/birthday party.jpg" alt="Birthday Party">
+            <h2>Birthday Party</h2>
+            <p>Celebrate birthdays with unique themes, fun activities, and memorable decorations.</p>
+            <button onclick="goToLogin(event)">Open</button>
+        </div>
+
+        <div class="service">
+            <a href="index.html"><img src="images/wedding.jpeg" alt="Weddings"></a>
+            <h2>Weddings</h2>
+            <p>From start to finish, we take care of every detail to ensure your wedding is perfect.</p>
+            <button onclick="openAuth()">Open</button>
+        </div>
+
+        <div class="service">
+            <a href="index.html"><img src="images/baby.jpg" alt="Baby Shower"></a>
+            <h2>Baby Shower</h2>
+            <p>Plan a beautiful baby shower to celebrate the upcoming arrival of your little one.</p>
+            <button onclick="openAuth()">Open</button>
+        </div>
+
+        <div class="service">
+            <a href="index.html"><img src="images/anniversary.jpg" alt="Anniversary"></a>
+            <h2>Anniversary</h2>
+            <p>Celebrate your milestones with a perfect anniversary party planned by us.</p>
+            <button onclick="openAuth()">Open</button>
+        </div>
+
+        <div class="service">
+            <a href="index.html"><img src="images/Corporate Programs.jpg" alt="Corporate Programs"></a>
+            <h2>Corporate Programs</h2>
+            <p>Professional event planning for corporate meetings, conferences, and parties.</p>
+            <button onclick="openAuth()">Open</button>
+        </div>
+
+        <div class="service">
+            <a href="index.html"><img src="images/college.jpg" alt="College Events"></a>
+            <h2>College Events</h2>
+            <p>Organize memorable events for colleges including fests, seminars, and cultural programs.</p>
+            <button onclick="openAuth()">Open</button>
+        </div>
+
+        <div class="service">
+            <a href="index.html"><img src="images/Home Ceremonies.jpg" alt="Home Ceremonies"></a>
+            <h2>Home Ceremonies</h2>
+            <p>Plan intimate home ceremonies with personalized touches and attention to detail.</p>
+            <button onclick="openAuth()">Open</button>
+        </div>
+
+        <div class="service">
+            <a href="index.html"><img src="images/Devotional Events.jpg" alt="Devotional Events"></a>
+            <h2>Devotional Events</h2>
+            <p>Organize serene and respectful devotional events with careful planning and execution.</p>
+            <button onclick="openAuth()">Open</button>
+        </div>
+
+        <div class="service">
+            <a href="index.html"><img src="images/other eevents.jpeg" alt="Other Events"></a>
+            <h2>Other Events</h2>
+            <p>We cater to various other events, ensuring each one is uniquely special.</p>
+            <button onclick="openAuth()">Open</button>
+        </div>
+    </div>
+
+
+    <script src="script1.js"></script>
+    <!-- The script tag below is incorrectly written; fixed it by removing src= -->
+    <script src="script.js"></script>
+</body>
+</html>
